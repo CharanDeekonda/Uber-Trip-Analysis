@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Trip Demand Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e2f;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        form {
+            background-color: #2b2b3d;
+            padding: 50px;  /* Increased padding for larger box */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 100%;  /* Increased width */
+            min-width: 350px;  /* Adjusted minimum width */
+        }
+        h1 {
+            color: #ffcc00;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        label {
+            font-size: 18px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+        input[type="datetime-local"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;  /* Increased padding for larger input fields */
+            margin: 12px 0 20px 0;  /* Increased margin for better spacing */
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #444455;
+            color: white;
+        }
+        input[type="submit"] {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ffaa00;
+        }
+        @media (max-width: 768px) {
+            form {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+          <center>
+            <h1>Uber Trip Demand Prediction</h1>
+            <form action="/" method="POST">
+                <label for="date_time">Select Date & Time:</label>
+                <input type="datetime-local" id="date_time" name="date_time" required><br>
+                <label for="active_vehicles">Active Vehicles (Optional):</label>
+                <input type="number" id="active_vehicles" name="active_vehicles" placeholder="Enter active vehicles (default: 1000)"><br>
+                <input type="submit" value="Predict">
+            </form>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
